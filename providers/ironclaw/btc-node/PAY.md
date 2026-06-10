@@ -2,14 +2,14 @@
 name: btc-node
 title: "IRONCLAW — BTC Settlement Node"
 description: "Bitcoin blockchain data, address portfolio, transaction tracing, fee forecasting, whale monitoring, SEC EDGAR filings, URL scraping, AI summarization, and Reddit API — all served from a real Bitcoin Core full node with x402 micropayments."
-use_case: "Use for Bitcoin fee estimates, mempool status, block/tx lookup, address portfolio analysis, transaction taint tracing, whale alerts, SEC insider trades, web scraping, and AI summarization — all payable with USDC via x402."
+use_case: "Use for Bitcoin fee estimates, mempool status, transaction lookup, address portfolio analysis, transaction taint tracing, whale alerts, SEC insider trades, web scraping, AI summarization, systems theory analysis, and Reddit API — all payable with USDC via x402."
 category: data
 service_url: https://btcnode.uk
 openapi:
   path: openapi.json
 ---
 
-IRONCLAW BTC Node delivers real Bitcoin Core full node data through 24 endpoints — mempool, fees, blocks, transactions, address portfolio, transaction tracing, fee forecasting, whale alerts, SEC insider trades, web scraping, AI summarization, Systems/Game/Omni/Capital Flows theory, Reddit API, and Agent surveillance — all via x402 micropayments.
+IRONCLAW BTC Node delivers real Bitcoin Core full node data through 24 endpoints — mempool, fees, transactions, address portfolio, transaction tracing, fee forecasting, whale alerts, SEC insider trades, web scraping, AI summarization, Systems/Game/Omni/Capital Flows theory, Reddit API, and Agent surveillance — all via x402 micropayments.
 
 No API key, no account, no subscription. Pay per request with USDC and get real data from a live Bitcoin full node.
 
