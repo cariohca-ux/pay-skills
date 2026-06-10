@@ -17,12 +17,16 @@ x402 USDC payment currently accepted on **Base mainnet** (eip155:8453). Solana m
 
 ## Spend-aware usage
 
-- **Start with `/api/info` or `/api/fees`** for the cheapest calls ($0.003 each) when you need a quick pulse check on the Bitcoin network.
-- **Use `/api/tx/{hash}`** for single-transaction lookups ($0.005) — returns confirmations, inputs, outputs, and value in one call.
-- **Use `/api/addr/{address}`** for full address portfolio ($0.005) — balance, UTXOs, recent transaction history.
-- **Use `/api/trace/{txid}`** for compliance or forensic analysis ($0.008) through 2 hops of fund tracing.
-- **Use `/api/whales`** ($0.005) to monitor large fund movements in real-time — pass `min_btc` and `limit` to narrow results.
-- **Use `/api/fees/predict`** ($0.005) for fee forecasting before broadcasting a Bitcoin transaction.
-- **Use `/api/sec/insider/{ticker}`** ($0.003) for SEC Form 4/3/5 insider trades without an EDGAR API key.
-- **Prefer `/api/scrape`** ($0.003) over `/api/summarize` ($0.003) when you only need raw text — both cost the same but scrape returns full content.
-- **Use Reddit endpoints** ($0.003 each) for social sentiment — `hot/{subreddit}`, `search`, `comments/{postId}`, and `trending`.
+- **Start with `/api/info`, `/api/fees` or `/api/mempool`** for the cheapest calls ($0.001 each) when you need a quick pulse check on the Bitcoin network.
+- **Use `/api/tx/{hash}`** for single-transaction lookups ($0.001) — returns confirmations, inputs, outputs, and value in one call.
+- **Use `/api/addr/{address}`** for full address portfolio ($0.002) — balance, UTXOs, recent transaction history.
+- **Use `/api/trace/{txid}`** for compliance or forensic analysis ($0.005) through 2 hops of fund tracing.
+- **Use `/api/whales`** ($0.001) to monitor large fund movements in real-time — pass `min_btc` and `limit` to narrow results.
+- **Use `/api/fees/predict`** ($0.001) for fee forecasting before broadcasting a Bitcoin transaction.
+- **Use `/api/sec/insider/{ticker}`** ($0.005) for SEC Form 4/3/5 insider trades without an EDGAR API key.
+- **Use `/api/scrape`** ($0.001) to extract clean text from any URL; use `/api/agent/scrape` ($0.003) for cached results with 1h SSD retention.
+- **Use `/api/summarize`** ($0.001) for AI text summarization.
+- **Use `/api/systems-theory`** ($0.01), **`/api/game-theory`** ($0.01), or **`/api/omni-theory`** ($0.03 — all 6 lenses) for deep analysis.
+- **Use `/api/capital-flows`** ($0.02) to trace money flows across systems.
+- **Use Reddit endpoints** ($0.001 each) for social sentiment — `hot/{subreddit}`, `search`, `comments/{postId}`, and `trending`.
+- **Use Agent Surveillance endpoints** for heavier analysis — address surveillance ($0.05), whale alerts ($0.02), coin taint ($0.10), Barbarian API ($0.01), agent scrape ($0.003).
