@@ -2,10 +2,16 @@
   "openapi": "3.1.0",
   "info": {
     "title": "BTC Node API — Agent + Bitcoin + Data + SEC + Scrape + AI + Reddit",
-    "version": "3.1.0",
+    "version": "1.0.0",
     "description": "Bitcoin blockchain data, address portfolio, transaction tracing, fee forecasting, whale monitoring, SEC EDGAR filings, URL scraping, AI summarization, Reddit API, and AI Agent surveillance endpoints via x402 micropayments on Base.",
-    "x-guidance": "Agent Surveillance endpoints ($0.01-0.10): address surveillance, whale alerts, coin taint analysis, node ops, scraping. Bitcoin endpoints ($0.001-0.005): fees, mempool, info, tx lookup, address portfolio, transaction trace, fee forecast, whale monitor. SEC insider trades ($0.05), URL scraping ($0.005), AI summarization ($0.01), Systems theory ($0.01), Game theory ($0.01), Omni theory ($0.03 — all 6 lenses), Capital flows ($0.02 — follow the money). Reddit API ($0.001): hot posts, search, comments, trending. All via x402 micropayments on Base network."
+    "x-guidance": "Agent Surveillance endpoints ($0.01-0.10): address surveillance, whale alerts, coin taint analysis, node ops, scraping. Bitcoin endpoints ($0.001-0.002): fees, mempool, info, tx lookup, address portfolio, transaction trace, fee forecast, whale monitor. SEC insider trades ($0.005), URL scraping ($0.001), AI summarization ($0.001), Systems theory ($0.01), Game theory ($0.01), Omni theory ($0.03 — all 6 lenses), Capital flows ($0.02 — follow the money). Reddit API ($0.001): hot posts, search, comments, trending. All via x402 micropayments on Base network."
   },
+  "servers": [
+    {
+      "url": "https://btcnode.uk",
+      "description": "IRONCLAW BTC Node production"
+    }
+  ],
   "paths": {
     "/api/fees": {
       "get": {
@@ -1134,11 +1140,5 @@
         }
       }
     }
-  },
-  "servers": [
-    {
-      "url": "https://btcnode.uk",
-      "description": "IRONCLAW BTC Node production"
-    }
-  ]
+  }
 }
