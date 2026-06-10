@@ -9,24 +9,25 @@ openapi:
   path: openapi.json
 ---
 
-IRONCLAW BTC Node delivers real Bitcoin Core full node data through 15+ endpoints — mempool, fees, blocks, transactions, address portfolio, transaction tracing, fee forecasting, whale alerts, SEC insider trades, web scraping, AI summarization, and Reddit API — all via x402 micropayments.
+IRONCLAW BTC Node delivers real Bitcoin Core full node data through 24 endpoints — mempool, fees, blocks, transactions, address portfolio, transaction tracing, fee forecasting, whale alerts, SEC insider trades, web scraping, AI summarization, Systems/Game/Omni/Capital Flows theory, Reddit API, and Agent surveillance — all via x402 micropayments.
 
 No API key, no account, no subscription. Pay per request with USDC and get real data from a live Bitcoin full node.
+
+**Every endpoint is $0.001 per call.** The lowest possible x402 price to prove the concept is working.
 
 x402 USDC payment currently accepted on **Base mainnet** (eip155:8453). Solana mainnet support is planned.
 
 ## Spend-aware usage
 
-- **Start with `/api/info`, `/api/fees` or `/api/mempool`** for the cheapest calls ($0.001 each) when you need a quick pulse check on the Bitcoin network.
-- **Use `/api/tx/{hash}`** for single-transaction lookups ($0.001) — returns confirmations, inputs, outputs, and value in one call.
-- **Use `/api/addr/{address}`** for full address portfolio ($0.002) — balance, UTXOs, recent transaction history.
-- **Use `/api/trace/{txid}`** for compliance or forensic analysis ($0.005) through 2 hops of fund tracing.
-- **Use `/api/whales`** ($0.001) to monitor large fund movements in real-time — pass `min_btc` and `limit` to narrow results.
-- **Use `/api/fees/predict`** ($0.001) for fee forecasting before broadcasting a Bitcoin transaction.
-- **Use `/api/sec/insider/{ticker}`** ($0.005) for SEC Form 4/3/5 insider trades without an EDGAR API key.
-- **Use `/api/scrape`** ($0.001) to extract clean text from any URL; use `/api/agent/scrape` ($0.003) for cached results with 1h SSD retention.
-- **Use `/api/summarize`** ($0.001) for AI text summarization.
-- **Use `/api/systems-theory`** ($0.01), **`/api/game-theory`** ($0.01), or **`/api/omni-theory`** ($0.03 — all 6 lenses) for deep analysis.
-- **Use `/api/capital-flows`** ($0.02) to trace money flows across systems.
-- **Use Reddit endpoints** ($0.001 each) for social sentiment — `hot/{subreddit}`, `search`, `comments/{postId}`, and `trending`.
-- **Use Agent Surveillance endpoints** for heavier analysis — address surveillance ($0.05), whale alerts ($0.02), coin taint ($0.10), Barbarian API ($0.01), agent scrape ($0.003).
+- **Everything costs $0.001.** Every Bitcoin data call, every SEC filing, every scrape, every AI analysis, every Reddit pull, every Agent surveillance query.
+- **Start with any endpoint.** No wrong choice when everything costs the same.
+- **Use `/api/info` or `/api/fees`** for a quick Bitcoin pulse check.
+- **Use `/api/scrape`** or **`/api/summarize`** to extract and analyze web content.
+- **Use `/api/tx/{hash}`** for single-transaction lookups.
+- **Use `/api/addr/{address}`** for full address portfolio — balance, UTXOs, history.
+- **Use `/api/trace/{txid}`** for compliance or forensic analysis through 2 hops of fund tracing.
+- **Use `/api/sec/insider/{ticker}`** for SEC Form 4/3/5 insider trades.
+- **Use `/api/whales`** for whale alerts — pass `min_btc` and `limit`.
+- **Use Reddit endpoints** for social sentiment — `hot/{subreddit}`, `search`, `comments/{postId}`, `trending`.
+- **Use Theory endpoints** (`/api/systems-theory`, `game-theory`, `omni-theory`, `capital-flows`) for deep analysis.
+- **Use Agent endpoints** for address surveillance ($0.001), whale alerts ($0.001), coin taint ($0.001), Barbarian API ($0.001), agent scrape ($0.001).

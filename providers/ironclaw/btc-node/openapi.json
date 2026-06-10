@@ -1,10 +1,10 @@
 {
   "openapi": "3.1.0",
   "info": {
-    "title": "BTC Node API — Agent + Bitcoin + Data + SEC + Scrape + AI + Reddit",
+    "title": "BTC Node API \u2014 Agent + Bitcoin + Data + SEC + Scrape + AI + Reddit",
     "version": "1.0.0",
     "description": "Bitcoin blockchain data, address portfolio, transaction tracing, fee forecasting, whale monitoring, SEC EDGAR filings, URL scraping, AI summarization, Reddit API, and AI Agent surveillance endpoints via x402 micropayments on Base.",
-    "x-guidance": "Agent Surveillance endpoints ($0.01-0.10): address surveillance, whale alerts, coin taint analysis, node ops, scraping. Bitcoin endpoints ($0.001-0.002): fees, mempool, info, tx lookup, address portfolio, transaction trace, fee forecast, whale monitor. SEC insider trades ($0.005), URL scraping ($0.001), AI summarization ($0.001), Systems theory ($0.01), Game theory ($0.01), Omni theory ($0.03 — all 6 lenses), Capital flows ($0.02 — follow the money). Reddit API ($0.001): hot posts, search, comments, trending. All via x402 micropayments on Base network."
+    "x-guidance": "Everything is $0.001 per call \u2014 Bitcoin data (fees, mempool, info, tx, addr, trace, fees predict, whales), SEC EDGAR insider trades, URL scrape, AI summarization, Systems/Game/Omni/Capital Flows theory, Reddit (hot, search, comments, trending), Agent surveillance (address, whales, taint, Barbarian API). All via x402 micropayments on Base network."
   },
   "servers": [
     {
@@ -249,7 +249,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.005"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -393,7 +393,7 @@
     "/api/systems-theory": {
       "post": {
         "operationId": "analyzeSystem",
-        "summary": "Systems theory analysis — 7 lenses",
+        "summary": "Systems theory analysis \u2014 7 lenses",
         "tags": [
           "AI"
         ],
@@ -401,7 +401,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.01"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -429,7 +429,7 @@
         },
         "responses": {
           "200": {
-            "description": "Systems theory analysis — stocks/flows, feedback loops, delays, leverage points, bounded rationality, resilience, archetypes"
+            "description": "Systems theory analysis \u2014 stocks/flows, feedback loops, delays, leverage points, bounded rationality, resilience, archetypes"
           },
           "402": {
             "description": "Payment Required"
@@ -440,7 +440,7 @@
     "/api/game-theory": {
       "post": {
         "operationId": "analyzeGame",
-        "summary": "Game theory analysis — Nash equilibrium, payoff matrix",
+        "summary": "Game theory analysis \u2014 Nash equilibrium, payoff matrix",
         "tags": [
           "AI"
         ],
@@ -448,7 +448,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.01"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -476,7 +476,7 @@
         },
         "responses": {
           "200": {
-            "description": "Game theory analysis — players, strategies, payoff matrix, Nash equilibrium, dominant strategies, game type, recommendations"
+            "description": "Game theory analysis \u2014 players, strategies, payoff matrix, Nash equilibrium, dominant strategies, game type, recommendations"
           },
           "402": {
             "description": "Payment Required"
@@ -487,7 +487,7 @@
     "/api/omni-theory": {
       "post": {
         "operationId": "analyzeOmni",
-        "summary": "Omni theory — all 6 lenses",
+        "summary": "Omni theory \u2014 all 6 lenses",
         "tags": [
           "AI"
         ],
@@ -495,7 +495,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.03"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -523,7 +523,7 @@
         },
         "responses": {
           "200": {
-            "description": "Omni theory analysis — systems theory, game theory, network theory, chaos theory, signaling theory, mechanism design, and synthesis"
+            "description": "Omni theory analysis \u2014 systems theory, game theory, network theory, chaos theory, signaling theory, mechanism design, and synthesis"
           },
           "402": {
             "description": "Payment Required"
@@ -534,7 +534,7 @@
     "/api/capital-flows": {
       "post": {
         "operationId": "analyzeCapitalFlows",
-        "summary": "Follow the money — capital flow analysis",
+        "summary": "Follow the money \u2014 capital flow analysis",
         "tags": [
           "AI"
         ],
@@ -542,7 +542,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.02"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -570,7 +570,7 @@
         },
         "responses": {
           "200": {
-            "description": "Capital flow analysis — concentration, flows, bottlenecks, whales, hiding, trapped, starving, leverage, prediction, play"
+            "description": "Capital flow analysis \u2014 concentration, flows, bottlenecks, whales, hiding, trapped, starving, leverage, prediction, play"
           },
           "402": {
             "description": "Payment Required"
@@ -589,7 +589,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.002"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -610,7 +610,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Address portfolio — balance, UTXOs, tx count"
+            "description": "Address portfolio \u2014 balance, UTXOs, tx count"
           },
           "402": {
             "description": "Payment Required"
@@ -629,7 +629,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.005"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -688,7 +688,7 @@
         },
         "responses": {
           "200": {
-            "description": "Fee forecast — current fees + next 3 block predictions"
+            "description": "Fee forecast \u2014 current fees + next 3 block predictions"
           },
           "402": {
             "description": "Payment Required"
@@ -960,7 +960,7 @@
     "/api/agent/address/{address}": {
       "get": {
         "operationId": "agentAddressSurveillance",
-        "summary": "Address Surveillance — balance, tx history, coinjoin risk",
+        "summary": "Address Surveillance \u2014 balance, tx history, coinjoin risk",
         "tags": [
           "Agent"
         ],
@@ -968,7 +968,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.05"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -988,7 +988,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Address surveillance data — balance, history, risk"
+            "description": "Address surveillance data \u2014 balance, history, risk"
           },
           "402": {
             "description": "Payment Required"
@@ -999,7 +999,7 @@
     "/api/agent/whales": {
       "get": {
         "operationId": "agentWhaleAlert",
-        "summary": "Mempool Whale Alert — large BTC transfers",
+        "summary": "Mempool Whale Alert \u2014 large BTC transfers",
         "tags": [
           "Agent"
         ],
@@ -1007,7 +1007,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.02"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -1028,7 +1028,7 @@
     "/api/agent/taint/{address}": {
       "get": {
         "operationId": "agentCoinTaint",
-        "summary": "Coin Taint / Ancestry — walk tx chain 5 hops, risk score",
+        "summary": "Coin Taint / Ancestry \u2014 walk tx chain 5 hops, risk score",
         "tags": [
           "Agent"
         ],
@@ -1036,7 +1036,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.10"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -1067,7 +1067,7 @@
     "/api/agent/conan": {
       "get": {
         "operationId": "agentBarbarianAPI",
-        "summary": "Barbarian API — ops, rank, traffic for btcnode.uk",
+        "summary": "Barbarian API \u2014 ops, rank, traffic for btcnode.uk",
         "tags": [
           "Agent"
         ],
@@ -1075,7 +1075,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.01"
+            "amount": "0.001"
           },
           "protocols": [
             {
@@ -1104,7 +1104,7 @@
           "price": {
             "mode": "fixed",
             "currency": "USD",
-            "amount": "0.003"
+            "amount": "0.001"
           },
           "protocols": [
             {
