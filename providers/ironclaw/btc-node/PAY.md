@@ -15,7 +15,7 @@ No API key, no account, no subscription. Pay per request with USDC and get real 
 
 **Every endpoint is $0.001 per call.** The lowest possible x402 price to prove the concept is working.
 
-x402 USDC payment currently accepted on **Base mainnet** (eip155:8453). Solana mainnet support is planned.
+x402 USDC payment accepted on **Base mainnet** (eip155:8453) and **Solana mainnet**.
 
 ## Spend-aware usage
 

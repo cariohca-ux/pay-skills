@@ -4,14 +4,8 @@
     "title": "BTC Node API \u2014 Agent + Bitcoin + Data + SEC + Scrape + AI + Reddit",
     "version": "1.0.0",
     "description": "Bitcoin blockchain data, address portfolio, transaction tracing, fee forecasting, whale monitoring, SEC EDGAR filings, URL scraping, AI summarization, Reddit API, and AI Agent surveillance endpoints via x402 micropayments on Base.",
-    "x-guidance": "Everything is $0.001 per call \u2014 Bitcoin data (fees, mempool, info, tx, addr, trace, fees predict, whales), SEC EDGAR insider trades, URL scrape, AI summarization, Systems/Game/Omni/Capital Flows theory, Reddit (hot, search, comments, trending), Agent surveillance (address, whales, taint, Barbarian API). All via x402 micropayments on Base network."
+    "x-guidance": "Everything is $0.001 per call. Bitcoin data, SEC filings, scraping, summarization, Reddit, theory analysis, agent surveillance. All via x402 micropayments on Base or Solana mainnet USDC."
   },
-  "servers": [
-    {
-      "url": "https://btcnode.uk",
-      "description": "IRONCLAW BTC Node production"
-    }
-  ],
   "paths": {
     "/api/fees": {
       "get": {
@@ -28,9 +22,36 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+              }
+            }
+          }
         },
         "responses": {
           "200": {
@@ -85,9 +106,36 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+              }
+            }
+          }
         },
         "responses": {
           "200": {
@@ -133,9 +181,36 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "additionalProperties": false
+              }
+            }
+          }
         },
         "responses": {
           "200": {
@@ -199,9 +274,45 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "hash": {
+                    "type": "string",
+                    "pattern": "^[a-fA-F0-9]{64}$",
+                    "description": "Bitcoin transaction hash (64 hex chars)"
+                  }
+                },
+                "required": [
+                  "hash"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
         },
         "responses": {
           "200": {
@@ -253,7 +364,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -301,7 +427,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -354,7 +495,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -405,7 +561,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -452,7 +623,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -499,7 +685,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -546,7 +747,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -593,7 +809,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -633,7 +864,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -682,7 +928,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -711,7 +972,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -760,7 +1036,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -808,7 +1099,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -895,7 +1201,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -943,7 +1264,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -972,7 +1308,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -1011,7 +1362,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -1040,7 +1406,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -1079,7 +1460,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
@@ -1108,7 +1504,22 @@
           },
           "protocols": [
             {
-              "x402": {}
+              "x402": {
+                "accepts": [
+                  {
+                    "scheme": "exact",
+                    "network": "eip155:8453",
+                    "payTo": "0x6a667a72d3d36d95421474019aa46f0308d643fc",
+                    "asset": "USDC"
+                  },
+                  {
+                    "scheme": "exact",
+                    "network": "solana:mainnet",
+                    "payTo": "BGbhSLtgPn7EhZw7XpN1bqEAxC1rdnMVCxw1TAm1up6p",
+                    "asset": "USDC"
+                  }
+                ]
+              }
             }
           ]
         },
